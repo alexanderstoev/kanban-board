@@ -1,0 +1,43 @@
+.project-header {
+  display: flex;
+  gap: 1em;
+}
+
+.project-header > * {
+  padding: 0.5em;
+}
+
+.project-name {
+  font-size: 1.2em;
+  font-weight: bold;
+
+  border-color: var(--project-header-name-border-color);
+  border-radius: var(--project-header-name-border-radius);
+  border-width: var(--project-header-name-border-width);
+  border-style: var(--project-header-name-border-style);
+
+  background: var(--project-header-name-background);
+}
+
+.project-stats {
+  font-size: 0.8em;
+  flex-basis: 20%;
+  border-color: var(--project-header-stats-border-color);
+  border-radius: var(--project-header-stats-border-radius);
+  border-width: var(--project-header-stats-border-width);
+  border-style: var(--project-header-stats-border-style);
+  background: var(--project-header-stats-background);
+}
+
+.project-description {
+  border-color: var(--project-header-description-border-color);
+  border-radius: var(--project-header-description-border-radius);
+  border-width: var(--project-header-description-border-width);
+  border-style: var(--project-header-description-border-style);
+
+  background: var(--project-header-description-background);
+}
+
+.label {
+  color: var(--color-secondary);
+}

@@ -1,0 +1,13 @@
+.column {
+  /* border-color: var(--column-border-color); */
+  border-radius: var(--column-border-radius);
+  border-width: var(--column-border-width);
+  border-style: var(--column-border-style);
+
+  background: var(--column-background);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0.5em;
+}

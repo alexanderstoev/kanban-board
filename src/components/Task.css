@@ -1,0 +1,21 @@
+.task {
+  border-color: var(--task-border-color);
+  border-radius: var(--task-border-radius);
+  border-width: var(--task-border-width);
+  border-style: var(--task-border-style);
+
+  background: var(--task-background);
+  padding: 0.2em;
+}
+
+.task:hover {
+  filter: brightness(85%);
+}
+
+.task-name {
+  font-weight: normal;
+}
+
+.task-theme {
+  font-size: 0.8em;
+}

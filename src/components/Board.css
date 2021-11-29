@@ -1,0 +1,9 @@
+.project-board {
+  gap: 2em;
+  display: grid;
+}
+.board {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2em;
+}

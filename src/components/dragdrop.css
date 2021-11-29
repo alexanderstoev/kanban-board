@@ -1,0 +1,14 @@
+.dragging {
+  opacity: 0.5;
+  pointer-events: all !important;
+}
+
+.droppable.waiting {
+  outline: 3px solid red;
+}
+.droppable.active {
+  border-color: red !important;
+}
+.droppable.waiting * {
+  pointer-events: none;
+}

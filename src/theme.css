@@ -1,0 +1,54 @@
+:root {
+  /* main colors */
+  --color-primary: rgb(255, 255, 255);
+  --color-primary-accent: rgb(182, 182, 182);
+  --color-secondary: #f66;
+  --color-secondary-accent: rgb(255, 137, 137);
+
+  /* main background */
+  --main-background: #333;
+  /* --main-background: url("./images/wallpaper.jpg"); */
+
+  /* border radius */
+  --border-radius: 0.2em;
+  --border-radius-colum: 1em;
+
+  /* 
+  * ELEMENTS 
+  */
+  /* project header */
+  --project-header-name-border-color: rgb(199, 199, 199);
+  --project-header-name-border-radius: var(--border-radius);
+  --project-header-name-border-width: 1px;
+  --project-header-name-border-style: solid;
+  --project-header-name-background: rgb(68, 68, 68);
+
+  --project-header-description-border-color: rgb(199, 199, 199);
+  --project-header-description-border-radius: var(--border-radius);
+  --project-header-description-border-width: 1px;
+  --project-header-description-border-style: solid;
+  --project-header-description-background: rgb(68, 68, 68);
+
+  --project-header-stats-border-color: rgb(199, 199, 199);
+  --project-header-stats-border-radius: var(--border-radius);
+  --project-header-stats-border-width: 1px;
+  --project-header-stats-border-style: solid;
+  --project-header-stats-background: rgb(68, 68, 68);
+
+  /* column */
+  --column-border-color: rgb(199, 199, 199);
+  --column-border-radius: var(--border-radius);
+  --column-border-width: 1px;
+  --column-border-style: solid;
+
+  --column-background: rgb(68, 68, 68);
+
+  /* task */
+  --task-border: 1px solid rgb(199, 199, 199);
+  --task-border-color: rgb(199, 199, 199);
+  --task-border-radius: var(--border-radius);
+  --task-border-width: 1px;
+  --task-border-style: solid;
+
+  --task-background: rgb(68, 68, 68);
+}
