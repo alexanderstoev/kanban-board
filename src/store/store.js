@@ -7,7 +7,7 @@ const LOCAL_STORAGE = "kanban-tasks";
 // load the state from the local storage
 const loadState = () => {
   const serializedState = localStorage.getItem(LOCAL_STORAGE);
-  if (serializedState === null) return {};
+  if (!serializedState) return {}; // if nothing in the localstorage - return empty object
   return JSON.parse(serializedState);
 };
 

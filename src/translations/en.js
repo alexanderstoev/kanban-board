@@ -6,10 +6,10 @@ import {
 } from "../common/constants";
 
 const translation = {};
-translation[STATUS_TODO] = "To do trans";
-translation[STATUS_DONE] = "Done trans";
-translation[STATUS_IN_PROGRESS] = "In Progress trans";
-translation[STATUS_BLOCKED] = "Blocked trans";
+translation[STATUS_TODO] = "To do";
+translation[STATUS_DONE] = "Done";
+translation[STATUS_IN_PROGRESS] = "In Progress";
+translation[STATUS_BLOCKED] = "Blocked";
 
 translation["add task"] = "Add new task";
 translation["save task"] = "Save task";
