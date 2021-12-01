@@ -19,6 +19,13 @@ export const tasksSlice = createSlice({
       }
       state.tasks.push(action.payload);
     },
+    setTaskStatus: (state, action) => {
+      const { taskId, newStatus } = action.payload;
+      const task = state.tasks.find((task) => task.id === taskId);
+      if (task) {
+        task.status = newStatus;
+      }
+    },
   },
 });
 

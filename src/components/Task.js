@@ -1,17 +1,16 @@
 import React from "react";
 
-import { dragEnd, dragStart } from "../common/dragdrop";
+import { dragStart } from "../common/dragdrop";
 
 import "./Task.css";
-// import "./dragdrop.css";
 
 export default function Task({ task }) {
   return (
     <div
+      data-task-id={task.id}
       className="task"
       draggable="true"
-      onDragStart={dragStart}
-      onDragEnd={dragEnd}>
+      onDragStart={dragStart}>
       <h4 className="task-title">{task.title}</h4>
       <p className="task-theme">{task.theme}</p>
     </div>

@@ -1,7 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import Column from "./Column";
 import ProjectHeader from "./ProjectHeader";
+import AddTask from "./AddTask";
+
+import {
+  selectBlockedTasks,
+  selectDoneTasks,
+  selectInProgressTasks,
+  selectTodoTasks,
+} from "../store/tasks";
 
 import {
   STATUS_TODO,
@@ -11,14 +20,6 @@ import {
 } from "../common/constants";
 
 import "./Board.css";
-import AddTask from "./AddTask";
-import {
-  selectBlockedTasks,
-  selectDoneTasks,
-  selectInProgressTasks,
-  selectTodoTasks,
-} from "../store/tasks";
-import { useSelector } from "react-redux";
 
 export default function Board() {
   const todoTasks = useSelector(selectTodoTasks);
@@ -31,10 +32,10 @@ export default function Board() {
       <ProjectHeader />
       <AddTask />
       <div className="board">
-        <Column type={STATUS_TODO} tasks={todoTasks} />
-        <Column type={STATUS_BLOCKED} tasks={blockedTasks} />
-        <Column type={STATUS_IN_PROGRESS} tasks={inProgressTasks} />
-        <Column type={STATUS_DONE} tasks={doneTasks} />
+        <Column status={STATUS_TODO} tasks={todoTasks} />
+        <Column status={STATUS_BLOCKED} tasks={blockedTasks} />
+        <Column status={STATUS_IN_PROGRESS} tasks={inProgressTasks} />
+        <Column status={STATUS_DONE} tasks={doneTasks} />
       </div>
     </div>
   );

@@ -1,17 +1,33 @@
-/**
- *
- * @param {DragEvent} event
- */
-export const drop = () => {};
+import { store } from "../store/store";
+import { setTaskStatus } from "../store/tasks";
 
 /**
  *
  * @param {DragEvent} event
  */
-export const dragStart = (event) => {
-  event.target.classList.add("dragging");
+export const drop = (event) => {
+  const taskId = event.dataTransfer.getData("text/plain");
+  let newStatus;
+
+  // check if we've dropped on column or a task
+  if (event.target.classList.contains("droppable")) {
+    newStatus = event.target.dataset.status;
+  } else {
+    newStatus = event.target.closest(".droppable").dataset.status;
+  }
+
+  // update the state
+  store.dispatch(setTaskStatus({ taskId, newStatus }));
+
+  // cleanup classes for the UI
   document.querySelectorAll(".droppable").forEach((elem) => {
-    elem.classList.add("waiting");
+    elem.classList.remove("waiting");
+  });
+  document.querySelectorAll(".dragging").forEach((elem) => {
+    elem.classList.remove("dragging");
+  });
+  document.querySelectorAll(".active").forEach((elem) => {
+    elem.classList.remove("active");
   });
 };
 
@@ -19,11 +35,11 @@ export const dragStart = (event) => {
  *
  * @param {DragEvent} event
  */
-export const dragEnd = (event) => {
-  event.target.classList.remove("dragging");
-  event.target.classList.remove("active");
+export const dragStart = (event) => {
+  event.dataTransfer.setData("text/plain", event.target.dataset.taskId);
+  event.target.classList.add("dragging");
   document.querySelectorAll(".droppable").forEach((elem) => {
-    elem.classList.remove("waiting");
+    elem.classList.add("waiting");
   });
 };
 
