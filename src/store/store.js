@@ -11,16 +11,13 @@ const loadState = () => {
   return JSON.parse(serializedState);
 };
 
-// export actions
-export const { addTask, seTaskStatus } = tasksSlice.actions;
-
 // export store
 export const store = configureStore({
-    reducer: tasksSlice.reducer,
-    preloadedState: loadState(),
+  reducer: tasksSlice.reducer,
+  preloadedState: loadState(),
 });
 
 // persist the store in the local storage
 store.subscribe(() => {
-    localStorage.setItem(LOCAL_STORAGE, JSON.stringify(store.getState()));
+  localStorage.setItem(LOCAL_STORAGE, JSON.stringify(store.getState()));
 });
