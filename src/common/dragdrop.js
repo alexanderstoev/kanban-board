@@ -1,11 +1,10 @@
-import { seTaskStatus, store } from "../store/store";
+import { setTaskStatus, store } from "../store/store";
 /**
  *
  * @param {DragEvent} event
  */
 export const drop = (event) => {
-  store.dispatch(seTaskStatus());
-  console.log(event);
+  store.dispatch(setTaskStatus());
 };
 
 /**
