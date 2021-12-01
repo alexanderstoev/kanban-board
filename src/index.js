@@ -8,13 +8,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import "./common/i18n";
+import { store } from "./store/store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <footer>
-      {process.env.REACT_APP_NAME} @ {process.env.REACT_APP_VERSION}
-    </footer>
+    <Provider store={store}>
+      <App />
+      <footer>
+        {process.env.REACT_APP_NAME} @ {process.env.REACT_APP_VERSION}
+      </footer>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
