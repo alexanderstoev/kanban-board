@@ -25,3 +25,24 @@ body {
   min-height: 100%;
 }
 
+button,
+input {
+  padding: 0.2em 0.75em;
+  font-size: 1em;
+}
+button {
+  color: var(--button-color);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  background: var(--button-background);
+}
+input {
+  color: var(--input-color);
+  border-color: var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  border-width: var(--input-border-width);
+  border-style: var(--input-border-style);
+  background: var(--input-background);
+}

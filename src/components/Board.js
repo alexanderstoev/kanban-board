@@ -10,11 +10,13 @@ import {
 } from "../common/constants";
 
 import "./Board.css";
+import AddTask from "./AddTask";
 
 export default function Board() {
   return (
     <div className="project-board">
       <ProjectHeader />
+      <AddTask />
       <div className="board">
         <Column type={STATUS_TODO} />
         <Column type={STATUS_BLOCKED} />
